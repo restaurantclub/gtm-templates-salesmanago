@@ -48,7 +48,7 @@ ___TEMPLATE_PARAMETERS___
     ],
     "displayName": "Salesmanago Client ID",
     "alwaysInSummary": true,
-    "valueHint": "e.g. xyz12345zzz"
+    "valueHint": "e.g. your-client-id-123"
   },
   {
     "type": "TEXT",
@@ -60,7 +60,7 @@ ___TEMPLATE_PARAMETERS___
         "type": "NON_EMPTY"
       }
     ],
-    "defaultValue": "app3.salesmanago.pl",
+    "valueHint": "xyz.salesmanago.pl",
     "help": "Your individual Endpoint is in SETTINGS -\u003e INTEGRATION -\u003e API ACCESS."
   },
   {
