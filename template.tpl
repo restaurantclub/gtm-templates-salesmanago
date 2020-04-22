@@ -22,6 +22,16 @@ ___INFO___
   },
   "containerContexts": [
     "WEB"
+  ],
+  "categories": [
+    "AFFILIATE_MARKETING",
+    "CONVERSIONS",
+    "EMAIL_MARKETING",
+    "EXPERIMENTATION",
+    "LEAD_GENERATION",
+    "MARKETING",
+    "PERSONALIZATION",
+    "SALES"
   ]
 }
 
