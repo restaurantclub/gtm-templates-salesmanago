@@ -14,3 +14,7 @@
 
 homepage: "https://github.com/restaurantclub"
 documentation: "https://github.com/restaurantclub/gtm-templates-salesmanago"
+versions:
+  # Latest version
+  - sha: 477db6f835c3caeb2a78f4fab8a2ec8a79e802ec
+    changeNotes: First initial release of the SALESmanago template
