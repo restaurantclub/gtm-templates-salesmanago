@@ -1,15 +1,5 @@
 # SALESmanago GTM Template
 
-TODO
-
-## How to add GTM Template in Workspace?
-
-TODO
-
-## How to use SALESmanago GTM Template?
-
-TODO
-
 ### Salesmanago Help and Support Platfarms: 
     
 [Monitoring code integration](https://docs.salesmanago.com/#monitoring-code-integration)
