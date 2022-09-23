@@ -228,6 +228,12 @@ ___TEMPLATE_PARAMETERS___
     "simpleValueType": true
   },
   {
+    "type": "CHECKBOX",
+    "name": "smcustom",
+    "checkboxText": "Enable custom integration",
+    "simpleValueType": true
+  },
+  {
     "type": "GROUP",
     "name": "objectPropertiesGroup",
     "displayName": "Event Properties",
@@ -314,6 +320,7 @@ const mergeObj = (obj, obj2) => {
 
 // Get opts
 const smid = data.smid;
+const smcustom = data.smcustom;
 const apiDomain = data.apiDomain;
 const owner = data.owner;
 const objectProps = data.objectPropertyList ? makeTableMap(data.objectPropertyList, 'name', 'value') : {};
@@ -322,6 +329,9 @@ const finalObjectProps = mergeObj(objectPropsFromVar, objectProps);
 const eventName = data.eventName === 'custom' ? data.customEventName : (data.eventName === 'variable' ? data.variableEventName : data.standardEventName);
 
 setInWindow('_smid', smid);
+if (smcustom) {
+  setInWindow('_smcustom', true);
+}
 log('finalObjectProps =', finalObjectProps);
 log('event =', eventName);
 
@@ -559,6 +569,45 @@ ___WEB_PERMISSIONS___
                   {
                     "type": 1,
                     "string": "SalesmanagoObject"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "_smcustom"
                   },
                   {
                     "type": 8,
