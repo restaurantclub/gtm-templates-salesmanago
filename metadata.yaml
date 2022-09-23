@@ -16,8 +16,10 @@ homepage: "https://github.com/restaurantclub"
 documentation: "https://github.com/restaurantclub/gtm-templates-salesmanago"
 versions:
   # Latest version
+  - sha: 694678024de0bcc15cce09fe0731d631eccb9976
+    changeNotes: Add _smcustom support
+  # Older versions
   - sha: 4524fa37472c32eb15bf40856523c8592ff17a83
     changeNotes: Modified logging permissions from all to debug
-  # Older versions
   - sha: 632b674b0023621236d2f1eb0b87b468754b5598
     changeNotes: First initial release of the SALESmanago template
