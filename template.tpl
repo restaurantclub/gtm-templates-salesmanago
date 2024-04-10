@@ -239,12 +239,7 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "sw.js file location",
     "simpleValueType": true,
     "valueHint": "/dir/to/sw.js",
-    "canBeEmptyString": true,
-    "valueValidators": [
-      {
-        "type": "NON_EMPTY"
-      }
-    ]
+    "canBeEmptyString": true
   },
   {
     "type": "GROUP",
