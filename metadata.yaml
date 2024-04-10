@@ -16,9 +16,11 @@ homepage: "https://github.com/restaurantclub"
 documentation: "https://github.com/restaurantclub/gtm-templates-salesmanago"
 versions:
   # Latest version
+  - sha: aaf2c682405d891180d1afc4520b24f0f34290f9
+    changeNotes: remove NON_EMPTY validator from smswdir
+  # Older versions
   - sha: 88f5f3ea58bd4b4d7c16852b38e0ec7950a46029
     changeNotes: Add _smswdir support
-  # Older versions
   - sha: 694678024de0bcc15cce09fe0731d631eccb9976
     changeNotes: Add _smcustom support
   - sha: 4524fa37472c32eb15bf40856523c8592ff17a83
