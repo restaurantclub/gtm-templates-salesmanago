@@ -234,6 +234,19 @@ ___TEMPLATE_PARAMETERS___
     "simpleValueType": true
   },
   {
+    "type": "TEXT",
+    "name": "smswdir",
+    "displayName": "sw.js file location",
+    "simpleValueType": true,
+    "valueHint": "/dir/to/sw.js",
+    "canBeEmptyString": true,
+    "valueValidators": [
+      {
+        "type": "NON_EMPTY"
+      }
+    ]
+  },
+  {
     "type": "GROUP",
     "name": "objectPropertiesGroup",
     "displayName": "Event Properties",
@@ -321,6 +334,7 @@ const mergeObj = (obj, obj2) => {
 // Get opts
 const smid = data.smid;
 const smcustom = data.smcustom;
+const smswdir = data.smswdir;
 const apiDomain = data.apiDomain;
 const owner = data.owner;
 const objectProps = data.objectPropertyList ? makeTableMap(data.objectPropertyList, 'name', 'value') : {};
@@ -331,6 +345,9 @@ const eventName = data.eventName === 'custom' ? data.customEventName : (data.eve
 setInWindow('_smid', smid);
 if (smcustom) {
   setInWindow('_smcustom', true);
+}
+if (smswdir) {
+  setInWindow('_smswdir', smswdir);
 }
 log('finalObjectProps =', finalObjectProps);
 log('event =', eventName);
@@ -608,6 +625,45 @@ ___WEB_PERMISSIONS___
                   {
                     "type": 1,
                     "string": "_smcustom"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "_smswdir"
                   },
                   {
                     "type": 8,
